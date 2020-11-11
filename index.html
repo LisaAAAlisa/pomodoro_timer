@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Quiz with timer</title>
+</head>
+
+<body>
+    <div id=startscreen>
+        <h1>Take this quiz</h1>
+        <button id=start-button>Button</button>
+    </div>
+    <div id=quizscreen>
+        <h1>Placeholder</h1>
+    </div>
+    <div id=endscreen>
+        <h1>Game over</h1>
+    </div>
+
+
+    <script>
+        var startScn = document.getElementById("startscreen");
+        var startBtn = document.getElementById("start-button");
+
+        var count = 0;
+
+        startBtn.addEventListener("click", startQuiz);
+        //lets consider two types of functions named and unnamed or( anonymous)
+        //define a named function using the function keyword
+        function startQuiz() {
+            //logic goes here
+            console.log("button clicked!")
+            startScn.style.display = "none";
+        }
+        startQuiz()
+
+        var questions = [
+            { q: "1. What is your name?", a: "King Arthur", choices: ["Sir Robin", "King Arthur", "Sir Lancelot of Camelot"] },
+            { q: "2. What is your quest?", a: "I seel the Holy Grail", choices: ["I seek the Holy Grail", "To join the knights at the Round Table", "To deteat the French"] }, 
+            { q: "3. Why do witches burn?", a: "They're made of wood", choices: ["They're made of tin", "They're made of wood", "They're made of candy"] }, 
+            { q: "4. What floats in water?", a: "a duck!", choices: ["brains", "pretty small rocks", "a duck!"] },
+            { q: "5. What...is the airspeed velocity of an unladen swallow?", a: "African or European", choices: ["Arfican or European?", "I don't know"]}
+        ]
+
+        function timer() {
+            var timer = setInterval(function () {
+                console.log(count);
+                count--;
+                if (asnwer === false) {
+                    count-5;
+                }
+            }, 1000);
+
+            var stopInterval = function () {
+                console.log('time is up!');
+                clearInterval(timer);
+            }
+        }
+for (i=0; i<5; i++) {
+
+}
+
+    </script>
+</body>
+
+</html>
+
+<!-- A <div> to hold the quiz
+A <button> to submit the quiz
+A <div> to display the results -->
