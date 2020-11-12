@@ -13,56 +13,19 @@
         <button id=start-button>Button</button>
     </div>
     <div id=quizscreen>
-        <h1>Placeholder</h1>
+        <h2 id="countdown" style="text-align: center">0</h2>
+        <h2 id="question"></h2>
+        <ol id="question-list">
+        </ol>
     </div>
     <div id=endscreen>
         <h1>Game over</h1>
+        <label id="result"></label>
     </div>
 
 
-    <script>
-        var startScn = document.getElementById("startscreen");
-        var startBtn = document.getElementById("start-button");
+    <script src="./script.js"></script>
 
-        var count = 0;
-
-        startBtn.addEventListener("click", startQuiz);
-        //lets consider two types of functions named and unnamed or( anonymous)
-        //define a named function using the function keyword
-        function startQuiz() {
-            //logic goes here
-            console.log("button clicked!")
-            startScn.style.display = "none";
-        }
-        startQuiz()
-
-        var questions = [
-            { q: "1. What is your name?", a: "King Arthur", choices: ["Sir Robin", "King Arthur", "Sir Lancelot of Camelot"] },
-            { q: "2. What is your quest?", a: "I seel the Holy Grail", choices: ["I seek the Holy Grail", "To join the knights at the Round Table", "To deteat the French"] }, 
-            { q: "3. Why do witches burn?", a: "They're made of wood", choices: ["They're made of tin", "They're made of wood", "They're made of candy"] }, 
-            { q: "4. What floats in water?", a: "a duck!", choices: ["brains", "pretty small rocks", "a duck!"] },
-            { q: "5. What...is the airspeed velocity of an unladen swallow?", a: "African or European", choices: ["Arfican or European?", "I don't know"]}
-        ]
-
-        function timer() {
-            var timer = setInterval(function () {
-                console.log(count);
-                count--;
-                if (asnwer === false) {
-                    count-5;
-                }
-            }, 1000);
-
-            var stopInterval = function () {
-                console.log('time is up!');
-                clearInterval(timer);
-            }
-        }
-for (i=0; i<5; i++) {
-
-}
-
-    </script>
 </body>
 
 </html>
